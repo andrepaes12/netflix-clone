@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- CSS-->
+  <link rel="stylesheet" href="style/main.css">
+
+  <!-- Responsividade-->
+  <link rel="stylesheet" href="style/responsive.css">
+  
+  <!-- OWL CSS-->
+  <link rel="stylesheet" href="style/owl/owl.carousel.min.css">
+  <link rel="stylesheet" href="style/owl/owl.theme.default.min.css">
+  
+  
+  <title>NETFLIX CLONE</title>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h2 class="logo">NETFLIX</h2>
+      <nav>
+        <a href="https://www.netflix.com/br/" target="_blank">Início</a>
+        <a href="https://www.netflix.com/br/browse/genre/83" target="_blank">Séries</a>
+        <a href="https://www.netflix.com/br/browse/genre/5343" target="_blank">Filmes</a>
+        <a href="https://www.netflix.com/br/browse/genre/6839" target="_blank">Documentários</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="filme-principal">
+      <div class="container">
+        <h3 class="titulo">HOUSE OF CARDS</h3>
+        <p class="descricao">Um político inescrupuloso não mede esforços para conquistar o poder nos EUA neste drama vencedor do Emmy e do Globo de Ouro. Assista agora a nova temporada do House of Cards que está imperdível.</p>
+        <div class="botoes">
+          <a class="linkbtn" href="https://www.youtube.com/watch?v=8QnMmpfKWvohttp://" target="_blank">
+          <button role="button" class="botao">
+              <i class="fas fa-play"></i>
+              ASSISTIR AGORA
+          </a>
+          </button>
+          <button role="button" class="botao" id="maisInfoBtn">
+            <i class="fas fa-info-circle"></i>
+            MAIS INFORMAÇÕES
+          </button>
+        </div>
+      </div>
+      <!-- Informações -->
+      <div id="maisInfo" class="info">
+        <!-- Conteúdo -->
+        <div class="info-content">
+          <span class="close">&times;</span>
+          <p>Um político inescrupuloso não mede esforços para conquistar o poder nos EUA neste drama vencedor do Emmy e do Globo de Ouro.</p>
+          <p>Assista agora a nova temporada do House of Cards que está imperdível.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!--Fazer o download do Owl Carousel 2-->
+  <!--Copiar o arquivo docs/assets/vendors/jquery.min e colar dentro da pasta js/owl-->
+  <!--Copiar o arquivo docs/assets/owlcariusel/owl.carousel.min e colar dentro da pasta js/owl-->
+  <!--Copiar os arquivos dist/assets/owl.carousel.min e owl.theme.default.min e colar dentro da pasta style/owl-->
+  <div class="carrossel-filmes">
+    <div class="owl-carousel owl-theme">
+      <div class="item">
+        <img class="box-filme" src="img/01.jpg" alt="">
+      </div>
+      <div class="item">
+        <img class="box-filme" src="img/02.jpg" alt="">
+      </div>
+      <div class="item">
+        <img class="box-filme" src="img/03.jpg" alt="">
+      </div>
+      <div class="item">
+        <img class="box-filme" src="img/04.jpg" alt="">
+      </div>
+      <div class="item">
+        <img class="box-filme" src="img/05.jpg" alt="">
+      </div>
+      <div class="item">
+        <img class="box-filme" src="img/06.jpg" alt="">
+      </div>
+      <div class="item">
+        <img class="box-filme" src="img/07.jpg" alt="">
+      </div>
+      <div class="item">
+        <img class="box-filme" src="img/08.jpg" alt="">
+      </div>
+      <div class="item">
+        <img class="box-filme" src="img/09.jpg" alt="">
+      </div>
+      <div class="item">
+        <img class="box-filme" src="img/10.jpg" alt="">
+      </div>
+    </div>
+  </div>
+  
+  <!-- Recomendação: colocar o link JS no final da página, não no Head do HTML-->
+  <script src="https://kit.fontawesome.com/f207b73492.js" crossorigin="anonymous"></script>
+  <script src="js/owl/jquery.min.js"></script>
+  <script src="js/owl/owl.carousel.min.js"></script>
+  <script src="js/owl/setup.js"></script>
+  <script>
+    // Div Mais Info
+    var info = document.getElementById("maisInfo");
+    
+    // Btn Mais Info
+    var btn = document.getElementById("maisInfoBtn");
+    
+    // Div <span> p/ fechar o box-info
+    var span = document.getElementsByClassName("close")[0];
+    
+    // abrir o box-info 
+    btn.onclick = function() {
+      info.style.display = "block";
+    }
+    
+    // fechar o box-info
+    span.onclick = function() {
+      info.style.display = "none";
+    }
+    
+    // fechar o box-info, clicando fora
+    window.onclick = function(event) {
+      if (event.target == info) {
+        info.style.display = "none";
+      }
+    }
+    </script>
+</body>
+</html>
